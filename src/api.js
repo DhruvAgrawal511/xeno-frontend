@@ -26,6 +26,8 @@ export const API = {
   createCustomer: (payload) => req('/api/customers', { method: 'POST', body: payload }),
   createOrder: (payload) => req('/api/orders', { method: 'POST', body: payload }),
   createOrderByEmail: (payload) => req('/api/orders/by-email', { method: 'POST', body: payload }),
+  updateCustomer: (id, payload) => req(`/api/customers/${id}`, { method: 'PUT', body: payload }),
+
 
   // protected
   previewSegment: (rules) => req('/api/segments/preview', { method: 'POST', body: { rules } }),
